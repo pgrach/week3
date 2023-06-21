@@ -1,0 +1,134 @@
+
+* {
+    font-family: 'Old Standard TT', serif;
+}
+:root {
+    --white: #f1faee;
+    --blue: #a8dadc;
+    --red: #E63946;
+    --dblue: #457b9d;
+    --vdblue: #1d3557;
+}
+
+@keyframes simple {
+    from {
+        background-color: var(--blue);
+    }
+
+    to {background-color: var(--red);
+    } 
+}
+
+@keyframes flame {
+    0%, 100% { 
+        background-color: var(--white);
+    }
+    25% {
+        background-color: #E63946;
+    }
+    75% {
+        background-color: #a8dadc;
+    }
+}
+
+body {
+    background: var(--white);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--blue);
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+header h1 {
+    font-family: 'Playfair Display SC', serif;
+    margin-bottom: 3%;
+}
+
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.navBar {
+    align-self: flex-end;
+    width: 40%;
+
+}
+
+.navBar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.buttons {
+    text-align: center;
+    flex-basis: 15%; 
+    transition: transform 0.3s ease-out;
+    
+
+}
+.buttons:hover {
+    background-color:#E63946;
+    cursor:pointer;
+    animation: simple 1s;
+    transform: scale(1.1);
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    margin-top: 5%;
+    border-radius: 50px;
+    animation-name: flame;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+.circle:hover{
+    background-image: url(/images/duc.png);
+    background-size: cover;
+    background-position: 10px;
+}    
+
+#flex-container {
+    background-color: var(--dblue);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    border: 2px double var(--red);
+    box-shadow: 25px 25px 50px var(--vdblue) inset;
+}
+
+h3 {
+    text-shadow: 10px 3px 7px var(--vdblue);
+}
+
+.flex-items {
+    flex-basis: 15%;
+    align-self: center;
+    background-color: #a8dadc;
+    border: 5px double #E63946;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+/* 
+.flex-items {
+flex-basis: 15%;
+} */
+
+.flex-item {
+    align-self: flex-end;
+}
